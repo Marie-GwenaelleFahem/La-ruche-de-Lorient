@@ -13,4 +13,4 @@ Le site est développé en utilisant les technologies suivantes :
 
 ## Hébergement
 
-Ce site est fièrement hébergé sur [GitHub Pages](https://pages.github.com/).
+Ce site est fièrement hébergé sur [GitHub Pages](https://marie-gwenaellefahem.github.io/La-ruche-de-Lorient/).
