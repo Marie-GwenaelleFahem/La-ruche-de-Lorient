@@ -28,4 +28,3 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages 
           folder: dist #(par défaut pour Vite)
-          force: true
