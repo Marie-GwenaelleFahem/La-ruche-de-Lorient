@@ -1,0 +1,30 @@
+name: Déployer sur GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ] # Remplace par le nom de ta branche principale
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Installation des dépendances
+        run: npm install # Ou yarn install ou pnpm install
+
+      - name: Build du projet Vite
+        run: npm run build # Ou yarn build ou pnpm build
+
+      - name: Déploiement sur GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages 
+          folder: dist #(par défaut pour Vite)
